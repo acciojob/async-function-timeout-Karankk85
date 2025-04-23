@@ -14,21 +14,11 @@ btn.addEventListener("click", () => {
     return;
   }
 
-  // Create and show "Loading..." row
-  const loadingRow = document.createElement("tr");
-  loadingRow.setAttribute("id", "loading");
-
-  const loadingCell = document.createElement("td");
-  loadingCell.setAttribute("colspan", "2");
-  loadingCell.textContent = "Loading...";
-  loadingRow.appendChild(loadingCell);
-
-  const table = document.createElement("table");
-  table.appendChild(loadingRow);
-  output.appendChild(table);
+  // Show "Loading..." text
+  output.textContent = "Loading...";
 
   // After delay, replace loading with text
   setTimeout(() => {
-    loadingCell.textContent = text;
+    output.textContent = text;
   }, delay);
 });
